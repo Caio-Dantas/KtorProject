@@ -2,12 +2,11 @@ package plugins
 
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
-import routes.listRepos
-import routes.searchRepo
+import repository.RepoRepository
+import routes.repos
 
-fun Application.configureRouting() {
+fun Application.configureRouting(repository: RepoRepository) {
     routing {
-        listRepos()
-        searchRepo()
+        repos(repository)
     }
 }

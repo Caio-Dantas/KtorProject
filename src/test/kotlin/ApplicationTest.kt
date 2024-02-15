@@ -17,6 +17,7 @@ class ReposTest {
         val repos = Json.decodeFromString<List<Repo>>(reposString)
 
         assertEquals(HttpStatusCode.OK, response.status)
+        assertEquals(2, repos.size)
         assertEquals("SBCBD", repos[0].title)
     }
 }

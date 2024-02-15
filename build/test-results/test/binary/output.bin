@@ -1,15 +1,18 @@
-b2024-01-05 13:46:14.567 [Test worker @coroutine#1] - Adding Accept-Charset=UTF-8 to http:///repos
-”2024-01-05 13:46:14.648 [DefaultDispatcher-worker-1 @call-context#2] - No ktor.deployment.watch patterns specified, automatic reload is not active.
-m2024-01-05 13:46:14.969 [DefaultDispatcher-worker-1 @call-context#2] - Application started in 0.331 seconds.
-T2024-01-05 13:46:15.009 [DefaultDispatcher-worker-1 @request#2] - Trace for [repos]
+b2024-02-15 12:33:42.772 [Test worker @coroutine#1] - Adding Accept-Charset=UTF-8 to http:///repos
+”2024-02-15 12:33:42.848 [DefaultDispatcher-worker-2 @call-context#2] - No ktor.deployment.watch patterns specified, automatic reload is not active.
+™2024-02-15 12:33:43.361 [DefaultDispatcher-worker-2 @call-context#2] - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+Ä2024-02-15 12:33:43.377 [DefaultDispatcher-worker-2 @call-context#2] - CREATE TABLE IF NOT EXISTS REPOS (ID INT AUTO_INCREMENT PRIMARY KEY, TITLE VARCHAR(128) NOT NULL, ORG VARCHAR(128) NOT NULL)
+k2024-02-15 12:33:43.437 [DefaultDispatcher-worker-2 @call-context#2] - Application started in 0.6 seconds.
+T2024-02-15 12:33:43.474 [DefaultDispatcher-worker-2 @request#2] - Trace for [repos]
 /, segment:0 -> SUCCESS @ /
-F  /customer, segment:0 -> FAILURE "Selector didn't match" @ /customer
 (  /repos, segment:1 -> SUCCESS @ /repos
 D    /repos/(method:GET), segment:1 -> SUCCESS @ /repos/(method:GET)
+[    /repos/{name?}, segment:1 -> FAILURE "Better match was already found" @ /repos/{name?}
 Matched routes:
 "  "" -> "repos" -> "(method:GET)"
 Route resolve result:
    SUCCESS @ /repos/(method:GET)
-l2024-01-05 13:46:15.060 [Test worker @coroutine#1] - Validating response for request http://localhost/repos
-u2024-01-05 13:46:15.060 [Test worker @coroutine#1] - Skipping default response validation for http://localhost/repos
-ƒ2024-01-05 13:46:15.073 [Test worker @coroutine#1] - Reading response body for http://localhost/repos as String with charset UTF-8
+w2024-02-15 12:33:43.493 [DefaultDispatcher-worker-2 @coroutine#6] - SELECT REPOS.ID, REPOS.TITLE, REPOS.ORG FROM REPOS
+l2024-02-15 12:33:43.817 [Test worker @coroutine#1] - Validating response for request http://localhost/repos
+u2024-02-15 12:33:43.817 [Test worker @coroutine#1] - Skipping default response validation for http://localhost/repos
+ƒ2024-02-15 12:33:43.820 [Test worker @coroutine#1] - Reading response body for http://localhost/repos as String with charset UTF-8
